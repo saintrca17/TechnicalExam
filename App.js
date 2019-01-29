@@ -7,7 +7,8 @@ import {
   View,
   Image,
   TextInput,
-  CheckBox
+  CheckBox,
+  KeyboardAvoidingView
 } from 'react-native';
 import validator from 'validator';
 import { Button } from './Button';
@@ -22,10 +23,12 @@ EStyleSheet.build();
 export default class AwesomeProject extends Component {
   render() {
     return (
-      <View style={styles.bckgrndClrLogin}>
+
+      <KeyboardAvoidingView style={styles.bckgrndClrLogin} behavior="padding" enabled>
         <LogoContainer />
         <LoginContainer />
-      </View>
+      </KeyboardAvoidingView>
+
     );
   }
 }
